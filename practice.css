@@ -1,0 +1,7 @@
+.row>*{
+    background-color: green;
+}
+.row{
+    margin-top: 10%;
+    gap: 10px;
+}

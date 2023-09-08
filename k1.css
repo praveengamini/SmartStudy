@@ -1,0 +1,143 @@
+body{
+    background-image: url(career\ background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.g{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.g1{
+    background-color: grey;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    
+
+}
+.g2{
+    background-color: aqua;
+    width: 500px;
+    border-radius: 50%;
+    height: 500px;
+    display: flex;
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 99999; 
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    transition: opacity 2s, visibility 2s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+    background-color: black;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(40, 184, 232);
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-content>*{
+    font-size: 6px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar a {
+      padding: 10px 20px;
+    }
+  
+    .dropdown-content {
+      min-width: 100%;
+      left: 0;
+      top: 100%;
+    }
+  }
+ .skills{
+  height: 300px;
+  width: 300px;
+  transition: height 1s, width 1s,transform 0.4s;
+  transform: rotate(10deg); 
+  border-radius: 5%;
+ }
+  .skills:hover{
+    cursor: pointer;
+    width: 310px;
+    height: 310px;
+    transform: rotate(0deg);  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  

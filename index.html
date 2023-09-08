@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStudy</title>
+    <style>
+          html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+     /* Style for the container that holds both the image and text */
+     .custom-image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style for the image */
+        .custom-image-container img {
+            width: 400px; /* Adjust the width as needed */
+            height: 250px;
+            border-radius: 40px;
+            margin-right: -500px;
+        }
+
+        /* Style for the text that will appear on hover */
+        .custom-image-text {
+            width: 200px;
+            position: absolute;
+            top: -30%;
+            right: 30%; /* Initial position to the right of the image */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+            pointer-events: none; /* Allows hovering through the text */
+            overflow: auto;
+            border-radius: 30px;
+        }
+
+        /* Arrow animation */
+        .custom-image-container.show-text .custom-image-text {
+            opacity: 1;
+            left: calc(100% + 200px); /* Adjust the distance from the image */
+        }
+
+        /* Arrow style */
+        .custom-image-container::before,
+        .custom-image-container::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -5px; /* Half of the arrow's height to vertically center it */
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        /* Left arrow */
+        .custom-image-container::before {
+            left: 100%; /* Initial position to the right of the image */
+            border-left: 10px solid rgba(0, 0, 0, 0.7);
+            animation: custom-moveArrow 1s linear; /* Arrow animation */
+        }
+
+        /* Right arrow */
+        .custom-image-container::after {
+            left: calc(100% + 20px); /* Initial position to the right of the image, matching text's position */
+            border-right: 10px solid rgba(0, 0, 0, 0.7);
+            animation: custom-moveArrow 1s linear; /* Arrow animation */
+        }
+
+        /* Keyframes for arrow animation */
+        @keyframes custom-moveArrow {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: calc(100% + 200px); /* Adjust the distance from the image */
+            }
+        }
+          /* Style the image */
+          #vibrating-image {
+            width: 400px; /* Set the image width */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Define the initial vibrating animation */
+        #vibrating-image:not(:hover) {
+            animation: vibrate 0.4s ease infinite;
+        }
+
+        /* Stop the vibrating animation on hover */
+        #vibrating-image:hover {
+            animation: none;
+        }
+
+        /* Keyframes for the vibrating effect */
+        @keyframes vibrate {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-4px);
+            }
+            50% {
+                transform: translateX(4px);
+            }
+            75% {
+                transform: translateX(-4px);
+            }
+            100% {
+                transform: translateX(4px);
+            }
+        }
+        /* Style for the container that holds both the image and text */
+        .new-custom-image-container {
+            position: relative;
+            display: inline-block;
+            text-align: right; /* Adjust text alignment to the right */
+            left: 50%;
+        }
+
+        /* Style for the image */
+        .new-custom-image-container img {
+            width: 400px; /* Adjust the width as needed */
+            height: 250px;
+            border-radius: 5%;
+            position: absolute;
+            top: 0;
+            left: 0; /* Position the image in the top-left corner */
+        }
+
+        /* Style for the text that will appear on hover */
+        .new-custom-image-text {
+            width: 200px;
+            position: absolute;
+            top: -50%;
+            left: -400px; /* Initial position to the left of the image */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            opacity: 0;
+            transform: translateX(-20px); /* Move text away from the image initially */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            pointer-events: none; /* Allows hovering through the text */
+            overflow: auto;
+            border-radius: 40px;
+        }
+
+        /* Arrow animation */
+        .new-custom-image-container.show-text .new-custom-image-text {
+            opacity: 1;
+            transform: translateX(0); /* Move text back to its original position */
+        }
+
+        /* Arrow style */
+        .new-custom-image-container::before,
+        .new-custom-image-container::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -5px; /* Half of the arrow's height to vertically center it */
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        /* Right arrow (reversed) */
+        .new-custom-image-container::before {
+            right: 100%; /* Initial position to the left of the image */
+            border-right: 10px solid rgba(0, 0, 0, 0.7); /* Adjusted for right arrow */
+            animation: new-custom-moveArrowLeft 1s linear; /* Arrow animation */
+        }
+
+        /* Left arrow (reversed) */
+        .new-custom-image-container::after {
+            right: calc(100% + 600px); /* Initial position to the left of the image, matching text's position */
+            border-left: 10px solid rgba(0, 0, 0, 0.7); /* Adjusted for left arrow */
+            animation: new-custom-moveArrowLeft 1s linear; /* Arrow animation */
+        }
+
+        /* Keyframes for arrow animation (reversed) */
+        @keyframes new-custom-moveArrowLeft {
+            0% {
+                right: 100%;
+            }
+            100% {
+                right: calc(100% + 20px); /* Adjust the distance from the image */
+            }
+        }
+
+        /* Style the image */
+        #new-vibrating-image {
+            width: 400px; /* Set the image width */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Define the initial vibrating animation */
+        #new-vibrating-image:not(:hover) {
+            animation: new-vibrate 0.4s ease infinite;
+        }
+
+        /* Stop the vibrating animation on hover */
+        #new-vibrating-image:hover {
+            animation: none;
+        }
+
+        /* Keyframes for the vibrating effect */
+        @keyframes new-vibrate {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-4px);
+            }
+            50% {
+                transform: translateX(4px);
+            }
+            75% {
+                transform: translateX(-4px);
+            }
+            100% {
+                transform: translateX(4px);
+            }
+        }
+        button{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        button:hover{
+            background-color: gray;
+        }
+        button:active{
+            background-color: green;
+        }
+ </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div style=" margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;">
+    <img src="scholar.avif" style="width: 80px;
+    border-radius: 50%;
+    ;
+    position: absolute;
+    margin-left: -230px;
+    margin-bottom: -60px;
+    z-index: -1;">
+    </div>
+    <a href="index.html" style="text-decoration: none;
+    color: black;"> <h1 style="text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: 100px;">Smart Study</h1></a>
+    <div style="position: relative;
+    right: -300px;">
+        <div class="custom-image-container"  id="vibrating-image" onmouseenter="showText()" onclick="hideText()">
+            <img src="computer.jpg" alt="Image">
+            <div class="custom-image-text">
+                Dear Users,
+    
+                We're deeply grateful for your visit to Team Smart Study's website! Your commitment to learning and growth inspires us.
+                
+                Your feedback, engagement, and presence in our educational community mean the world to us. Thank you for being a part of our journey.
+                
+                Stay tuned for more valuable resources and support as we continue to evolve and serve you better.
+                <br>
+                Warm regards,
+                <br>
+                Team Smart Study
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:70px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
+    <a href="k1.html">
+        <button style="height: 60px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    border: 3px solid black;">Enter the website</button>
+    </a>
+    </div>
+    
+    <div class="new-custom-image-container" id="new-vibrating-image" onmouseenter="newShowText()" onclick="newHideText()">
+        <div class="new-custom-image-text">
+            Apology to Smartphone Users:
+            <br>
+            We apologize for the inconvenience some smartphone users have faced while accessing our website. Our team is actively working to resolve these issues, and improvements will be available soon. Thank you for your patience and continued support.
+            <br>
+            Sincerely,
+            <br>
+            Team SmartStudy
+        </div>
+        <img src="mobile.png" alt="Image">
+    </div>
+    <script>
+        function showText() {
+            const container = document.querySelector(".custom-image-container");
+            container.classList.add("show-text");
+        }
+
+        function hideText() {
+            const container = document.querySelector(".custom-image-container");
+            container.classList.remove("show-text");
+        }
+        function showText() {
+        const container = document.querySelector(".custom-image-container");
+        container.classList.add("show-text");
+        document.getElementById("vibrating-image").style.animation = "none"; // Stop the vibration
+    }
+
+    function hideText() {
+        const container = document.querySelector(".custom-image-container");
+        container.classList.remove("show-text");
+    }
+    function newShowText() {
+            const container = document.querySelector(".new-custom-image-container");
+            container.classList.add("show-text");
+        }
+
+        function newHideText() {
+            const container = document.querySelector(".new-custom-image-container");
+            container.classList.remove("show-text");
+        }
+        function newShowText() {
+        const container = document.querySelector(".new-custom-image-container");
+        container.classList.add("show-text");
+        document.getElementById("new-vibrating-image").style.animation = "none"; // Stop the vibration
+    }
+
+    // Function to hide the text
+    function newHideText() {
+        const container = document.querySelector(".new-custom-image-container");
+        container.classList.remove("show-text");
+    }
+    </script>
+</body>
+</html>

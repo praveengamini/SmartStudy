@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="k1.css" rel="stylesheet">
+        <title>Home</title>
+        <script src="k1.js"></script>
+        <style>
+          .sparkling-word {
+    font-size: 28px;
+    font-weight: bolder;
+    position: relative;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.letter {
+    animation: sparkle 2s infinite alternate, color-change 5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: red;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: yellow;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: purple;
+    }
+}
+        </style>
+        <script>
+          window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+  const activePage = window.location.pathname;
+  const navLinks = document.querySelectorAll('nav a').forEach(link => {
+    if(link.href.includes(`${activePage}`)){
+      link.classList.add('active');
+      console.log(link);
+    }
+  })
+   // Get the carousel element
+   var carousel = document.getElementById("carouselExample");
+
+   // Start the carousel interval (3000 milliseconds = 3 seconds)
+   var carouselInterval = setInterval(function() {
+     carousel.querySelector(".carousel-control-next").click();
+   }, 3000);
+ 
+   // Pause the carousel interval when the mouse is over the carousel
+   carousel.addEventListener("mouseover", function() {
+     clearInterval(carouselInterval);
+   });
+ 
+   // Resume the carousel interval when the mouse leaves the carousel
+   carousel.addEventListener("mouseout", function() {
+     carouselInterval = setInterval(function() {
+       carousel.querySelector(".carousel-control-next").click();
+     }, 3000);
+   });
+   document.addEventListener("DOMContentLoaded", function() {
+    const navbarLinks = document.querySelectorAll(".navbar a");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", function(event) {
+        // Remove 'active' class from all links
+        navbarLinks.forEach(link => {
+          link.classList.remove("active");
+        });
+
+        // Add 'active' class to the clicked link
+        this.classList.add("active");
+      });
+    });
+  });
+        </script>
+    </head>
+    <body id="home">
+      <div class="loader"></div>
+     <div style="margin-top: 3%;">
+      <div style="display: flex;
+      align-items: center;
+      justify-content: center;">
+  <img src="scholar.avif" style="width: 80px;
+  border-radius: 50%;
+  ;
+  position: absolute;
+  margin-left: -200px;
+  z-index: -1;">
+      </div>
+     <a href="index.html" style="text-decoration: none;
+     color: black;"> <h1 style="text-align: center;
+      margin-bottom: 300x;">Smart study</h1></a>
+     </div>
+     <div class="sparkling-word" style="margin-right: -40px;">
+      <span class="letter" ><img src="new_gif.mp4" style="width: 100px;
+      border: 50%;"></span>
+  </div>
+     <a href="https://goaps.iisc.ac.in/login" style="text-decoration: none;">
+      <marquee scrollamount="10s" style="
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      border-radius: 10px;">GATE registration 2024 -  <span style="text-decoration: underline; color:red;">click here</span></marquee>
+     </a>
+     <div class="navbar"
+     style="display: flex;
+     justify-content: space-around;">
+        <a class="nav-link disabled" href="k1.html"><h2 class="r1" style="color: gray;">Home</h2></a>
+        <div class="dropdown">
+        <a href="#">Year of Study</a>
+        <div class="dropdown-content">
+          <a href="1st year.html">1st Year</a>
+          <a href="2nd year.html">2nd Year</a>
+          <a href="3rd year.html">3rd Year</a>
+          <a href="4th year.html">4th Year</a>
+        </div>
+      </div>
+      <a href="coding.html">Coding</a>
+      <a href="about.html">About</a>
+    </div>
+    
+     </div>
+        <div style="
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: -120px;
+        margin-left: 20px;">
+         <div style="display: flex;
+         flex-direction: column;">
+        <a href="other skills.html"> <h1 style="text-decoration: underline;
+          margin-top:-10px;">Other Skills</h1></a>
+          <a href="other skills.html" style="color: black;
+          font-weight: 600;
+          ;"><img src="skills.png"  style="margin-bottom: -200px;
+          margin-right: -50px;" class="skills"></a>
+         </div>        
+        </div>
+        <div style="width: 370px;
+            margin-left: 60%;
+          margin-top: -200px;">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item" style="background-color: white;">
+                <img src="vignan.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" style="background-color: white;">
+                <img src="Jntuk-logo.png" class="d-block w-100" alt="..." style="width: 300px;
+                border-radius: 50%;">
+              </div>
+              <div class="carousel-item active" style="background-color: white;">
+                <img src="JNTUg.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+
+</html>

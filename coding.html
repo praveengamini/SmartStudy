@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding</title>
+  <style>
+    /* General styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Styling for questions and dropdowns */
+    .question {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdowns {
+      display: flex;
+      gap: 20%;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content p {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Styling for code blocks */
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, Monaco, monospace;
+    }
+    header {
+    background-color: gray;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+nav li {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+
+  </style>
+</head>
+<body>
+    <header style="margin-bottom: 40px;">
+        <nav>
+            <ul>
+                <li><a href="k1.html" class="home">Home</a></li>
+                <li><a href="#section1" class="pt1">Python</a></li>
+                <li><a href="#section2" class="pt2">DSA</a></li>
+                <li><a href="#section3" class="pt3">Java</a></li>
+                <li><a href="#section4" class="pt4">C++</a></li>
+            </ul>
+        </nav>
+    </header>
+ <div style="display: flex;
+ flex-direction: column;" id="section1">
+ <h1>Python</h1>
+ <div class="question">
+     
+    <p>Problem 1: Write a Python function that calculates the square of a number.</p>
+    
+    <!-- First Dropdown Button -->
+   <div class="dropdowns">
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('dropdown1')">Test Cases</button>
+        <div id="dropdown1" class="dropdown-content">
+            <p>
+              Test Case:<hr>
+              - Input: 4
+              <hr>
+              - Expected Output: 16
+            </p>
+        </div>
+      </div>
+      
+      <!-- Second Dropdown Button -->
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('dropdown2')">Explanation</button>
+        <div id="dropdown2" class="dropdown-content">
+            <p>
+              Explanation:
+              - The function takes a single number as input and returns its square, which is obtained by multiplying the number by itself.
+            </p>
+        </div>
+      </div>
+      
+      <!-- Third Dropdown Button with a unique ID -->
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('dropdown3')">Solution</button>
+        <div id="dropdown3" class="dropdown-content">
+            <p>
+              Code:
+              <pre><code class="language-python line-numbers">
+    def square(number):
+        """
+        This function calculates the square of a number.
+        """
+        return number * number
+              </code></pre>
+            </p>
+        </div>
+      </div>
+   </div>
+ </div>
+    
+<div class="question">
+    <p>Problem 2: Write a Python program to find the sum of all even numbers from 1 to N.</p>
+
+    <!-- First Dropdown Button -->
+    <div class="dropdowns">
+         <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem1_testcases')">Test Cases</button>
+            <div id="problem1_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 10
+                    <hr>
+                    - Expected Output: 30
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem1_explanation')">Explanation</button>
+            <div id="problem1_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program calculates the sum of even numbers from 1 to N using a list comprehension.
+                    - It filters even numbers using the condition `x % 2 == 0`.
+                    - The `sum()` function is used to find the sum of the filtered numbers.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('problem1')">Solution</button>
+        <div id="problem1" class="dropdown-content">
+            <p>
+                Solution:
+                <pre><code class="language-python">
+    N = 10
+    sum_even = sum([x for x in range(1, N + 1) if x % 2 == 0])
+    print("Sum of even numbers from 1 to", N, "is", sum_even)
+                    </code></pre>
+            </p>
+        </div>
+    </div>
+ </div>
+</div>
+<div class="question">
+    <p>Problem 3: Write a Python program to calculate the average of a list of numbers.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem3_testcases')">Test Cases</button>
+            <div id="problem3_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: [10, 20, 30, 40, 50]
+                    <hr>
+                    - Expected Output: 30.0
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem3_explanation')">Explanation</button>
+            <div id="problem3_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program calculates the average of a list of numbers by summing them and dividing by the count.
+                    - It uses the built-in `sum()` and `len()` functions for this purpose.
+                </p>
+            </div>
+        </div>
+        <!-- Solution Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('problem3')">Solution</button>
+        <div id="problem3" class="dropdown-content">
+            <p>
+                Solution:
+                        <pre><code class="language-python">
+            numbers = [10, 20, 30, 40, 50]
+            average = sum(numbers) / len(numbers)
+            print("Average:", average)
+                        </code></pre>
+                    </p>
+          </div>
+    </div>
+</div>
+ </div>
+
+ <div class="question">
+    <p>Problem 4: Write a Python program to find the Nth Fibonacci number.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem4_testcases')">Test Cases</button>
+            <div id="problem4_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 6
+                    <hr>
+                    - Expected Output: 8
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem4_explanation')">Explanation</button>
+            <div id="problem4_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program calculates the Nth Fibonacci number using a recursive approach.
+                    - The Fibonacci sequence is defined as: F(0) = 0, F(1) = 1, and F(n) = F(n-1) + F(n-2) for n > 1.
+                </p>
+            </div>
+        </div>
+    <!-- Solution Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown('problem4')">Solution</button>
+        <div id="problem4" class="dropdown-content">
+            <p>
+                    Solution:
+                    <pre><code class="language-python">
+        def fibonacci(n):
+            if n <= 0:
+                return 0
+            elif n == 1:
+                return 1
+            else:
+                return fibonacci(n - 1) + fibonacci(n - 2)
+
+        n = 6
+        result = fibonacci(n)
+        print("Fibonacci number at position", n, "is", result)
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+ </div>
+ </div>
+ <div class="question">
+    <p>Problem 5: Write a Python program to check if a given number is prime or not.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem5_testcases')">Test Cases</button>
+            <div id="problem5_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 17
+                    <hr>
+                    - Expected Output: True
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem5_explanation')">Explanation</button>
+            <div id="problem5_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program checks if a number is prime by iterating from 2 to the square root of the number.
+                    - If the number is divisible by any integer in this range, it's not prime.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem5')">Solution</button>
+            <div id="problem5" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-python">
+        import math
+    
+        def is_prime(number):
+            if number <= 1:
+                return False
+            for i in range(2, int(math.sqrt(number)) + 1):
+                if number % i == 0:
+                    return False
+            return True
+    
+        num = 17
+        if is_prime(num):
+            print(num, "is prime.")
+        else:
+            print(num, "is not prime.")
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="question">
+    <p>Problem 6: Write a Python program to find the Greatest Common Divisor (GCD) of two numbers.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem6_testcases')">Test Cases</button>
+            <div id="problem6_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 24, 36
+                    <hr>
+                    - Expected Output: 12
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem6_explanation')">Explanation</button>
+            <div id="problem6_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program calculates the GCD of two numbers using the Euclidean algorithm.
+                    - It repeatedly replaces the larger number with the remainder when dividing the larger number by the smaller number.
+                    - This process continues until one of the numbers becomes zero, and the other becomes the GCD.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem6')">Solution</button>
+            <div id="problem6" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-python">
+        def gcd(a, b):
+            while b:
+                a, b = b, a % b
+            return a
+    
+        num1, num2 = 24, 36
+        result = gcd(num1, num2)
+        print("GCD of", num1, "and", num2, "is", result)
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="question">
+        <p>Problem 7: Write a Python program to reverse the words in a sentence.</p>
+    
+        <!-- Test Cases Dropdown -->
+        <div class="dropdowns">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('problem7_testcases')">Test Cases</button>
+                <div id="problem7_testcases" class="dropdown-content">
+                    <p>
+                        Test Case:<hr>
+                        - Input: "Hello World"
+                        <hr>
+                        - Expected Output: "World Hello"
+                    </p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('problem7_explanation')">Explanation</button>
+                <div id="problem7_explanation" class="dropdown-content">
+                    <p>
+                        Explanation:
+                        - The program reverses the words in a sentence by splitting the sentence into words, reversing the order of the words, and then joining them back into a sentence.
+                    </p>
+                </div>
+            </div>
+             <!-- Solution Dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem7')">Solution</button>
+            <div id="problem7" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-python">
+        def reverse_words(sentence):
+            words = sentence.split()
+            reversed_sentence = ' '.join(reversed(words))
+            return reversed_sentence
+    
+        input_sentence = "Hello World"
+        result = reverse_words(input_sentence)
+        print("Reversed sentence:", result)
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+   </div>  
+</div>
+<div class="question">
+    <p>Problem 8: Write a Python program to generate prime numbers up to a given limit N.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem8_testcases')">Test Cases</button>
+            <div id="problem8_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 20
+                    <hr>
+                    - Expected Output: [2, 3, 5, 7, 11, 13, 17, 19]
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem8_explanation')">Explanation</button>
+            <div id="problem8_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program generates prime numbers up to a given limit N using the Sieve of Eratosthenes algorithm.
+                    - It starts with a list of numbers from 2 to N and iteratively removes multiples of prime numbers.
+                    - The remaining numbers are prime.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem8')">Solution</button>
+            <div id="problem8" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-python">
+        def generate_primes(limit):
+            sieve = [True] * (limit + 1)
+            sieve[0] = sieve[1] = False
+            primes = []
+    
+            for p in range(2, int(limit**0.5) + 1):
+                if sieve[p]:
+                    for i in range(p * p, limit + 1, p):
+                        sieve[i] = False
+    
+            for p in range(2, limit + 1):
+                if sieve[p]:
+                    primes.append(p)
+            return primes
+    
+        limit = 20
+        result = generate_primes(limit)
+        print("Prime numbers up to", limit, "are:", result)
+                    </code></pre>
+                </p>
+            </div>
+    </div>
+    </div>    
+</div>
+ <!-- Problem 9 -->
+<div class="question">
+    <p>Problem 9: Find the Longest Common Subsequence</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem9_testcases')">Test Cases</button>
+            <div id="problem9_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: "AGGTAB", "GXTXAYB"
+                    <hr>
+                    - Expected Output: "GTAB"
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem9_explanation')">Explanation</button>
+            <div id="problem9_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program finds the Longest Common Subsequence (LCS) of two strings using dynamic programming.
+                    - It constructs a table to store the length of LCS for different substrings of the two input strings.
+                    - The LCS can be reconstructed from this table.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem9')">Solution</button>
+            <div id="problem9" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-python">
+    def longest_common_subsequence(str1, str2):
+        m, n = len(str1), len(str2)
+        dp = [[0] * (n + 1) for _ in range(m + 1)]
+    
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if str1[i - 1] == str2[j - 1]:
+                    dp[i][j] = dp[i - 1][j - 1] + 1
+                else:
+                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    
+        # Reconstruct LCS
+        lcs = []
+        i, j = m, n
+        while i > 0 and j > 0:
+            if str1[i - 1] == str2[j - 1]:
+                lcs.append(str1[i - 1])
+                i -= 1
+                j -= 1
+            elif dp[i - 1][j] > dp[i][j - 1]:
+                i -= 1
+            else:
+                j -= 1
+    
+        return ''.join(reversed(lcs))
+    
+    str1 = "AGGTAB"
+    str2 = "GXTXAYB"
+    result = longest_common_subsequence(str1, str2)
+    print("Longest Common Subsequence:", result)
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+   
+</div>
+    <!-- Problem 10 -->
+<div class="question">
+    <p>Problem 10: Generate Parentheses</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem10_testcases')">Test Cases</button>
+            <div id="problem10_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: `n = 3`
+                    <hr>
+                    - Expected Output:<br>
+                    ```
+                    [
+                      "((()))",
+                      "(()())",
+                      "(())()",
+                      "()(())",
+                      "()()()"
+                    ]
+                    ```
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem10_explanation')">Explanation</button>
+            <div id="problem10_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program generates all possible combinations of well-formed parentheses using a recursive approach.
+                    - It ensures that each opening parenthesis has a corresponding closing parenthesis.
+                    - The result is a list of all valid combinations of parentheses.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem10_solution')">Solution</button>
+            <div id="problem10_solution" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-python">
+def generate_parentheses(n):
+    def backtrack(s, left, right):
+        if len(s) == 2 * n:
+            combinations.append(s)
+            return
+        if left < n:
+            backtrack(s + '(', left + 1, right)
+        if right < left:
+            backtrack(s + ')', left, right + 1)
+
+    combinations = []
+    backtrack('', 0, 0)
+    return combinations
+
+n = 3
+result = generate_parentheses(n)
+print("Valid Parentheses Combinations:", result)
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+ </div>
+ <div style="display: flex;
+ flex-direction: column;" id="section2">
+    <h1>Data Structures and Algorithms</h1>
+ <div class="question">
+    <p>Problem 1: Find the Kth Element from the End of a Linked List</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('kth_element_testcases')">Test Cases</button>
+            <div id="kth_element_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Linked list: 1 -> 2 -> 3 -> 4 -> 5, K = 2
+                    <hr>
+                    - Expected Output: 4
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('kth_element_explanation')">Explanation</button>
+            <div id="kth_element_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to find the Kth element from the end of a singly linked list.
+                    - You can solve it by using two pointers: one pointer (fast) moves K nodes ahead, and another pointer (slow) starts from the beginning.
+                    - When the fast pointer reaches the end, the slow pointer will be at the Kth element from the end.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('kth_element_solution')">Solution</button>
+            <div id="kth_element_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+int findKthFromEnd(struct Node* head, int k) {
+    struct Node* fast = head;
+    struct Node* slow = head;
+
+    // Move the fast pointer K nodes ahead
+    for (int i = 0; i < k; i++) {
+        if (fast == NULL) {
+            return -1; // K is greater than the length of the list
+        }
+        fast = fast->next;
+    }
+
+    // Move both pointers until fast reaches the end
+    while (fast != NULL) {
+        fast = fast->next;
+        slow = slow->next;
+    }
+
+    return slow->data;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="question">
+    <p>Problem 2: Find the Maximum Element in a Stack</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('max_element_testcases')">Test Cases</button>
+            <div id="max_element_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Push 5, Push 10, Push 3, Push 7, Max Element
+                    <hr>
+                    - Expected Output: 10
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('max_element_explanation')">Explanation</button>
+            <div id="max_element_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to find the maximum element in a stack efficiently.
+                    - You need to implement a stack that supports two operations: Push and Max Element.
+                    - The Max Element operation should return the maximum element in the stack at that moment.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('max_element_solution')">Solution</button>
+            <div id="max_element_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Structure for a stack node
+struct StackNode {
+    int data;
+    struct StackNode* next;
+};
+
+// Structure for the stack
+struct Stack {
+    struct StackNode* top;
+};
+
+// Function to create a new stack node
+struct StackNode* newNode(int data) {
+    struct StackNode* stackNode = (struct StackNode*)malloc(sizeof(struct StackNode));
+    stackNode->data = data;
+    stackNode->next = NULL;
+    return stackNode;
+}
+
+// Function to create an empty stack
+struct Stack* createStack() {
+    struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
+    stack->top = NULL;
+    return stack;
+}
+
+// Function to push an element onto the stack
+void push(struct Stack* stack, int data) {
+    struct StackNode* stackNode = newNode(data);
+    stackNode->next = stack->top;
+    stack->top = stackNode;
+}
+
+// Function to pop an element from the stack
+int pop(struct Stack* stack) {
+    if (stack->top == NULL) {
+        return -1; // Stack is empty
+    }
+    int data = stack->top->data;
+    struct StackNode* temp = stack->top;
+    stack->top = stack->top->next;
+    free(temp);
+    return data;
+}
+
+// Function to get the maximum element in the stack
+int getMax(struct Stack* stack) {
+    if (stack->top == NULL) {
+        return -1; // Stack is empty
+    }
+    int max = stack->top->data;
+    struct StackNode* current = stack->top->next;
+    while (current != NULL) {
+        if (current->data > max) {
+            max = current->data;
+        }
+        current = current->next;
+    }
+    return max;
+}
+
+int main() {
+    struct Stack* stack = createStack();
+
+    push(stack, 5);
+    push(stack, 10);
+    push(stack, 3);
+    push(stack, 7);
+
+    printf("Max Element: %d\n", getMax(stack)); // Output: Max Element: 10
+
+    pop(stack);
+    pop(stack);
+
+    printf("Max Element: %d\n", getMax(stack)); // Output: Max Element: 5
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <div class="question">
+    <p>Problem 3: Implement a Queue using Stacks</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('queue_with_stacks_testcases')">Test Cases</button>
+            <div id="queue_with_stacks_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Operations: Enqueue(1), Enqueue(2), Dequeue(), Enqueue(3), Dequeue()
+                    <hr>
+                    - Expected Output: [1, 2]
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('queue_with_stacks_explanation')">Explanation</button>
+            <div id="queue_with_stacks_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to implement a queue data structure using stacks.
+                    - You need to support two operations: Enqueue and Dequeue.
+                    - Enqueue should add an element to the back of the queue, and Dequeue should remove and return the front element.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('queue_with_stacks_solution')">Solution</button>
+            <div id="queue_with_stacks_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+// Structure for a stack node
+struct StackNode {
+    int data;
+    struct StackNode* next;
+};
+
+// Structure for a stack
+struct Stack {
+    struct StackNode* top;
+};
+
+// Function to create a new stack node
+struct StackNode* newNode(int data) {
+    struct StackNode* stackNode = (struct StackNode*)malloc(sizeof(struct StackNode));
+    stackNode->data = data;
+    stackNode->next = NULL;
+    return stackNode;
+}
+
+// Function to create an empty stack
+struct Stack* createStack() {
+    struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
+    stack->top = NULL;
+    return stack;
+}
+
+// Function to push an element onto the stack
+void push(struct Stack* stack, int data) {
+    struct StackNode* stackNode = newNode(data);
+    stackNode->next = stack->top;
+    stack->top = stackNode;
+}
+
+// Function to pop an element from the stack
+int pop(struct Stack* stack) {
+    if (stack->top == NULL) {
+        return -1; // Stack is empty
+    }
+    int data = stack->top->data;
+    struct StackNode* temp = stack->top;
+    stack->top = stack->top->next;
+    free(temp);
+    return data;
+}
+
+// Structure for implementing a queue using two stacks
+struct QueueWithStacks {
+    struct Stack* stack1; // For enqueue operation
+    struct Stack* stack2; // For dequeue operation
+};
+
+// Function to create an empty queue with stacks
+struct QueueWithStacks* createQueueWithStacks() {
+    struct QueueWithStacks* queue = (struct QueueWithStacks*)malloc(sizeof(struct QueueWithStacks));
+    queue->stack1 = createStack();
+    queue->stack2 = createStack();
+    return queue;
+}
+
+// Function to enqueue an element into the queue
+void enqueue(struct QueueWithStacks* queue, int data) {
+    push(queue->stack1, data);
+}
+
+// Function to dequeue an element from the queue
+int dequeue(struct QueueWithStacks* queue) {
+    if (queue->stack1->top == NULL && queue->stack2->top == NULL) {
+        return -1; // Queue is empty
+    }
+    if (queue->stack2->top == NULL) {
+        // Transfer elements from stack1 to stack2
+        while (queue->stack1->top != NULL) {
+            push(queue->stack2, pop(queue->stack1));
+        }
+    }
+    return pop(queue->stack2);
+}
+
+int main() {
+    struct QueueWithStacks* queue = createQueueWithStacks();
+
+    enqueue(queue, 1);
+    enqueue(queue, 2);
+    dequeue(queue);
+    enqueue(queue, 3);
+    dequeue(queue);
+
+    printf("Elements in the queue: [");
+    int element;
+    while ((element = dequeue(queue)) != -1) {
+        printf("%d, ", element);
+    }
+    printf("]\n"); // Output: Elements in the queue: [1, 2]
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="question">
+    <p>Problem 4: Find the Intersection of Two Arrays</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('intersection_of_arrays_testcases')">Test Cases</button>
+            <div id="intersection_of_arrays_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: [1, 2, 2, 1], [2, 2]
+                    <hr>
+                    - Expected Output: [2]
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Input: [4, 9, 5], [9, 4, 9, 8, 4]
+                    <hr>
+                    - Expected Output: [9, 4]
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('intersection_of_arrays_explanation')">Explanation</button>
+            <div id="intersection_of_arrays_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to find the intersection of two arrays, i.e., the elements that appear in both arrays.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('intersection_of_arrays_solution')">Solution</button>
+            <div id="intersection_of_arrays_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Function to find the intersection of two arrays
+int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {
+    // Initialize a result array to store the intersection
+    int* result = (int*)malloc(sizeof(int) * (nums1Size > nums2Size ? nums2Size : nums1Size));
+    *returnSize = 0;
+
+    // Sort both arrays to efficiently find the intersection
+    qsort(nums1, nums1Size, sizeof(int), compare);
+    qsort(nums2, nums2Size, sizeof(int), compare);
+
+    int i = 0, j = 0;
+
+    // Find the intersection
+    while (i < nums1Size && j < nums2Size) {
+        if (nums1[i] == nums2[j]) {
+            // Add the common element to the result
+            result[(*returnSize)++] = nums1[i];
+            i++;
+            j++;
+        } else if (nums1[i] < nums2[j]) {
+            i++;
+        } else {
+            j++;
+        }
+    }
+
+    return result;
+}
+
+// Function to compare two integers (used for sorting)
+int compare(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int main() {
+    int nums1[] = {1, 2, 2, 1};
+    int nums1Size = 4;
+    int nums2[] = {2, 2};
+    int nums2Size = 2;
+    int returnSize;
+
+    int* result = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
+
+    printf("Intersection of the arrays: [");
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d", result[i]);
+        if (i < returnSize - 1) {
+            printf(", ");
+        }
+    }
+    printf("]\n"); // Output: Intersection of the arrays: [2]
+
+    free(result);
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="question">
+    <p>Problem 5: Reverse a Linked List</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('reverse_linked_list_testcases')">Test Cases</button>
+            <div id="reverse_linked_list_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 1 -> 2 -> 3 -> 4 -> 5
+                    <hr>
+                    - Expected Output: 5 -> 4 -> 3 -> 2 -> 1
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Input: 1 -> 2
+                    <hr>
+                    - Expected Output: 2 -> 1
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('reverse_linked_list_explanation')">Explanation</button>
+            <div id="reverse_linked_list_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to reverse a singly linked list.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('reverse_linked_list_solution')">Solution</button>
+            <div id="reverse_linked_list_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Definition for singly-linked list
+struct ListNode {
+    int val;
+    struct ListNode* next;
+};
+
+// Function to reverse a linked list
+struct ListNode* reverseList(struct ListNode* head) {
+    struct ListNode* prev = NULL;
+    struct ListNode* current = head;
+    struct ListNode* next = NULL;
+
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+
+    return prev;
+}
+
+// Function to create a new node with a given value
+struct ListNode* createNode(int value) {
+    struct ListNode* newNode = (struct ListNode*)malloc(sizeof(struct ListNode));
+    newNode->val = value;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to print a linked list
+void printList(struct ListNode* head) {
+    struct ListNode* current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->val);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    struct ListNode* head = createNode(1);
+    head->next = createNode(2);
+    head->next->next = createNode(3);
+    head->next->next->next = createNode(4);
+    head->next->next->next->next = createNode(5);
+
+    printf("Original Linked List: ");
+    printList(head); // Output: Original Linked List: 1 -> 2 -> 3 -> 4 -> 5 -> NULL
+
+    head = reverseList(head);
+
+    printf("Reversed Linked List: ");
+    printList(head); // Output: Reversed Linked List: 5 -> 4 -> 3 -> 2 -> 1 -> NULL
+
+    // Clean up memory
+    while (head != NULL) {
+        struct ListNode* temp = head;
+        head = head->next;
+        free(temp);
+    }
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 6: Find the Missing Number in an Array</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('missing_number_testcases')">Test Cases</button>
+            <div id="missing_number_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: [3, 0, 1]
+                    <hr>
+                    - Expected Output: 2
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Input: [9, 6, 4, 2, 3, 5, 7, 0, 1]
+                    <hr>
+                    - Expected Output: 8
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('missing_number_explanation')">Explanation</button>
+            <div id="missing_number_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to find the missing number in an array containing distinct numbers from 0 to n, where n is the length of the array.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('missing_number_solution')">Solution</button>
+            <div id="missing_number_solution" class="dropdown-content">
+                <p>
+                    Solution ():
+                    <pre><code>
+                        #include <stdio.h>
+
+                            int missingNumber(int nums[], int n) {
+                                int expectedSum = (n * (n + 1)) / 2;
+                                int actualSum = 0;
+                            
+                                for (int i = 0; i < n; i++) {
+                                    actualSum += nums[i];
+                                }
+                            
+                                return expectedSum - actualSum;
+                            }
+                            
+                            int main() {
+                                int nums1[] = {3, 0, 1};
+                                int n1 = sizeof(nums1) / sizeof(nums1[0]);
+                                printf("Missing number: %d\n", missingNumber(nums1, n1));  // Output: 2
+                            
+                                int nums2[] = {9, 6, 4, 2, 3, 5, 7, 0, 1};
+                                int n2 = sizeof(nums2) / sizeof(nums2[0]);
+                                printf("Missing number: %d\n", missingNumber(nums2, n2));  // Output: 8
+                            
+                                return 0;
+                            }
+                            
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 7: Implement a Hash Table</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('hash_table_testcases')">Test Cases</button>
+            <div id="hash_table_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Operations: ["put('key1', 'value1')", "get('key1')", "put('key2', 'value2')", "get('key2')"]
+                    <hr>
+                    - Expected Output: ["value1", "value1", "value2", "value2"]
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Operations: ["put('name', 'Alice')", "put('age', 30)", "get('name')", "get('age')"]
+                    <hr>
+                    - Expected Output: ["Alice", 30, "Alice", 30]
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('hash_table_explanation')">Explanation</button>
+            <div id="hash_table_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to implement a basic hash table that supports key-value pair operations: put and get.
+                    - The hash table should allow storing and retrieving values using unique keys.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('hash_table_solution')">Solution</button>
+            <div id="hash_table_solution" class="dropdown-content">
+                <p>
+                    Solution (in C++):
+                    <pre><code>
+#include <iostream>
+#include <vector>
+#include <list>
+
+class HashTable {
+private:
+    std::vector<std::list<std::pair<std::string, int>>> data;
+    size_t size;
+
+    size_t hash(const std::string& key) {
+        size_t hashVal = 0;
+        for (char c : key) {
+            hashVal = (hashVal * 31 + c) % size;
+        }
+        return hashVal;
+    }
+
+public:
+    HashTable(size_t initialSize) : size(initialSize), data(initialSize) {}
+
+    void put(const std::string& key, int value) {
+        size_t index = hash(key);
+        for (auto& pair : data[index]) {
+            if (pair.first == key) {
+                pair.second = value;
+                return;
+            }
+        }
+        data[index].emplace_back(key, value);
+    }
+
+    int get(const std::string& key) {
+        size_t index = hash(key);
+        for (auto& pair : data[index]) {
+            if (pair.first == key) {
+                return pair.second;
+            }
+        }
+        return -1;
+    }
+};
+
+int main() {
+    HashTable ht(100);
+
+    ht.put("key1", 100);
+    std::cout << "Value for key1: " << ht.get("key1") << std::endl;  // Output: Value for key1: 100
+
+    ht.put("key2", 200);
+    std::cout << "Value for key2: " << ht.get("key2") << std::endl;  // Output: Value for key2: 200
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+ </div>
+ <div class="question">
+    <p>Problem 8: Detect a Cycle in a Directed Graph</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('detect_cycle_testcases')">Test Cases</button>
+            <div id="detect_cycle_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Graph with 3 nodes and the following edges: [(0 -> 1), (1 -> 2), (2 -> 0)]
+                    <hr>
+                    - Expected Output: True
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Input: Graph with 4 nodes and the following edges: [(0 -> 1), (1 -> 2), (2 -> 3)]
+                    <hr>
+                    - Expected Output: False
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('detect_cycle_explanation')">Explanation</button>
+            <div id="detect_cycle_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to detect whether a directed graph contains a cycle.
+                    - A cycle exists if there is a path that leads back to a previously visited node.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('detect_cycle_solution')">Solution</button>
+            <div id="detect_cycle_solution" class="dropdown-content">
+                <p>
+                    Solution (in C++):
+                    <pre><code>
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+
+class Graph {
+public:
+    std::unordered_map<int, std::vector<int>> adjList;
+
+    void addEdge(int from, int to) {
+        adjList[from].push_back(to);
+    }
+
+    bool hasCycle() {
+        std::unordered_set<int> visited;
+        std::unordered_set<int> recStack;
+
+        for (const auto& [node, neighbors] : adjList) {
+            if (!visited.count(node) && hasCycleUtil(node, visited, recStack)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+private:
+    bool hasCycleUtil(int node, std::unordered_set<int>& visited, std::unordered_set<int>& recStack) {
+        visited.insert(node);
+        recStack.insert(node);
+
+        for (int neighbor : adjList[node]) {
+            if (!visited.count(neighbor) && hasCycleUtil(neighbor, visited, recStack)) {
+                return true;
+            } else if (recStack.count(neighbor)) {
+                return true;
+            }
+        }
+
+        recStack.erase(node);
+        return false;
+    }
+};
+
+int main() {
+    Graph g1;
+    g1.addEdge(0, 1);
+    g1.addEdge(1, 2);
+    g1.addEdge(2, 0);
+
+    if (g1.hasCycle()) {
+        std::cout << "Graph 1 contains a cycle." << std::endl;  // Output: Graph 1 contains a cycle.
+    } else {
+        std::cout << "Graph 1 does not contain a cycle." << std::endl;
+    }
+
+    Graph g2;
+    g2.addEdge(0, 1);
+    g2.addEdge(1, 2);
+    g2.addEdge(2, 3);
+
+    if (g2.hasCycle()) {
+        std::cout << "Graph 2 contains a cycle." << std::endl;
+    } else {
+        std::cout << "Graph 2 does not contain a cycle." << std::endl;  // Output: Graph 2 does not contain a cycle.
+    }
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="question">
+    <p>Problem 9: Find the Topological Sort of a Directed Graph</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('topological_sort_testcases')">Test Cases</button>
+            <div id="topological_sort_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Graph with 4 nodes and the following edges: [(0 -> 1), (0 -> 2), (1 -> 3), (2 -> 3)]
+                    <hr>
+                    - Expected Output: [0, 1, 2, 3]
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Input: Graph with 5 nodes and the following edges: [(0 -> 1), (0 -> 2), (1 -> 3), (2 -> 3), (3 -> 4)]
+                    <hr>
+                    - Expected Output: [0, 1, 2, 3, 4]
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('topological_sort_explanation')">Explanation</button>
+            <div id="topological_sort_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to find the topological sort of a directed graph.
+                    - Topological sorting is an ordering of the nodes in a directed acyclic graph (DAG) where for each directed edge (u, v), node u comes before node v in the ordering.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('topological_sort_solution')">Solution</button>
+            <div id="topological_sort_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Define a structure for a node in the graph
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Define a structure for the graph
+struct Graph {
+    int V;
+    struct Node** adjList;
+};
+
+// Function to create a new node
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to create a graph with V vertices
+struct Graph* createGraph(int V) {
+    struct Graph* graph = (struct Graph*)malloc(sizeof(struct Graph));
+    graph->V = V;
+    graph->adjList = (struct Node**)malloc(V * sizeof(struct Node*));
+    for (int i = 0; i < V; i++) {
+        graph->adjList[i] = NULL;
+    }
+    return graph;
+}
+
+// Function to add an edge to the graph
+void addEdge(struct Graph* graph, int src, int dest) {
+    struct Node* newNode = createNode(dest);
+    newNode->next = graph->adjList[src];
+    graph->adjList[src] = newNode;
+}
+
+// Function to perform topological sort
+void topologicalSortUtil(struct Graph* graph, int v, int visited[], struct Node** stack) {
+    visited[v] = 1;
+
+    struct Node* current = graph->adjList[v];
+    while (current != NULL) {
+        int adjNode = current->data;
+        if (!visited[adjNode]) {
+            topologicalSortUtil(graph, adjNode, visited, stack);
+        }
+        current = current->next;
+    }
+
+    struct Node* newNode = createNode(v);
+    newNode->next = *stack;
+    *stack = newNode;
+}
+
+void topologicalSort(struct Graph* graph) {
+    int* visited = (int*)malloc(graph->V * sizeof(int));
+    struct Node* stack = NULL;
+
+    for (int i = 0; i < graph->V; i++) {
+        visited[i] = 0;
+    }
+
+    for (int i = 0; i < graph->V; i++) {
+        if (!visited[i]) {
+            topologicalSortUtil(graph, i, visited, &stack);
+        }
+    }
+
+    while (stack != NULL) {
+        printf("%d ", stack->data);
+        stack = stack->next;
+    }
+    printf("\n");
+}
+
+int main() {
+    int V = 4;
+    struct Graph* graph = createGraph(V);
+    addEdge(graph, 0, 1);
+    addEdge(graph, 0, 2);
+    addEdge(graph, 1, 3);
+    addEdge(graph, 2, 3);
+
+    printf("Topological Sort: ");
+    topologicalSort(graph);  // Output: Topological Sort: 0 1 2 3
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="question">
+    <p>Problem 10: Check if a String is a Palindrome</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('palindrome_testcases')">Test Cases</button>
+            <div id="palindrome_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: "racecar"
+                    <hr>
+                    - Expected Output: True
+                </p>
+                <p>
+                    Test Case:<hr>
+                    - Input: "hello"
+                    <hr>
+                    - Expected Output: False
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('palindrome_explanation')">Explanation</button>
+            <div id="palindrome_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The problem is to check if a given string is a palindrome.
+                    - A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('palindrome_solution')">Solution</button>
+            <div id="palindrome_solution" class="dropdown-content">
+                <p>
+                    Solution (in C):
+                    <pre><code>
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+// Function to check if a string is a palindrome
+bool isPalindrome(char* str) {
+    int len = strlen(str);
+    int i = 0, j = len - 1;
+
+    while (i < j) {
+        if (str[i] != str[j]) {
+            return false;
+        }
+        i++;
+        j--;
+    }
+
+    return true;
+}
+
+int main() {
+    char str1[] = "racecar";
+    if (isPalindrome(str1)) {
+        printf("\"%s\" is a palindrome.\n", str1);  // Output: "racecar" is a palindrome.
+    } else {
+        printf("\"%s\" is not a palindrome.\n", str1);
+    }
+
+    char str2[] = "hello";
+    if (isPalindrome(str2)) {
+        printf("\"%s\" is a palindrome.\n", str2);
+    } else {
+        printf("\"%s\" is not a palindrome.\n", str2);  // Output: "hello" is not a palindrome.
+    }
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+<div style="display: flex;
+flex-direction: column;" id="section3">
+<h1>Java</h1>
+<div class="question">
+    <p>Problem 1: Write a Java program to implement a binary search algorithm for a sorted array.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem12_testcases')">Test Cases</button>
+            <div id="problem12_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Sorted Array: [1, 3, 5, 7, 9, 11, 13, 15]
+                    - Search Element: 7
+                    <hr>
+                    - Expected Output: Index 3 (element 7 found at index 3)
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem12_explanation')">Explanation</button>
+            <div id="problem12_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program implements a binary search algorithm to find an element in a sorted array efficiently.
+                    - It compares the target element with the middle element of the array.
+                    - Depending on the comparison result, it narrows down the search range to the left or right half of the array.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem12')">Solution</button>
+            <div id="problem12" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+public class BinarySearch {
+    public int binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            
+            if (arr[mid] == target) {
+                return mid; // Element found
+            } else if (arr[mid] < target) {
+                left = mid + 1; // Search in the right half
+            } else {
+                right = mid - 1; // Search in the left half
+            }
+        }
+        
+        return -1; // Element not found
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 2: Write a Java program to calculate the factorial of a given integer using recursion.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem13_testcases')">Test Cases</button>
+            <div id="problem13_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 5
+                    <hr>
+                    - Expected Output: 120
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem13_explanation')">Explanation</button>
+            <div id="problem13_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program calculates the factorial of a given integer using recursion.
+                    - Factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+                    - The base case for recursion is when n is 0, in which case the factorial is 1.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem13')">Solution</button>
+            <div id="problem13" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+public class Factorial {
+    public int calculateFactorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * calculateFactorial(n - 1);
+        }
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 3: Write a Java program to find the sum of all prime numbers within a given range.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem14_testcases')">Test Cases</button>
+            <div id="problem14_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 10 to 50
+                    <hr>
+                    - Expected Output: 158
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem14_explanation')">Explanation</button>
+            <div id="problem14_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program calculates the sum of all prime numbers within a given range (inclusive).
+                    - It checks each number in the range for primality and adds prime numbers to the sum.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem14')">Solution</button>
+            <div id="problem14" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+public class PrimeSum {
+    public int sumPrimesInRange(int start, int end) {
+        int sum = 0;
+        for (int num = start; num <= end; num++) {
+            if (isPrime(num)) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    public boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 4: Write a Java program to count the frequency of each element in an array.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem15_testcases')">Test Cases</button>
+            <div id="problem15_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+                    <hr>
+                    - Expected Output: {1=1, 2=2, 3=3, 4=4}
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem15_explanation')">Explanation</button>
+            <div id="problem15_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program counts the frequency of each element in an integer array and stores the results in a map.
+                    - It iterates through the array, increments the count for each element, and stores it in the map.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem15')">Solution</button>
+            <div id="problem15" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+import java.util.HashMap;
+import java.util.Map;
+
+public class ElementFrequencyCounter {
+    public Map<Integer, Integer> countElementFrequency(int[] arr) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        return frequencyMap;
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 5: Write a Java program to count the frequency of each element in an array.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem15_testcases')">Test Cases</button>
+            <div id="problem15_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+                    <hr>
+                    - Expected Output: {1=1, 2=2, 3=3, 4=4}
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem15_explanation')">Explanation</button>
+            <div id="problem15_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program counts the frequency of each element in an integer array and stores the results in a map.
+                    - It iterates through the array, increments the count for each element, and stores it in the map.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem15')">Solution</button>
+            <div id="problem15" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+import java.util.HashMap;
+import java.util.Map;
+
+public class ElementFrequencyCounter {
+    public Map<Integer, Integer> countElementFrequency(int[] arr) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        return frequencyMap;
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 6: Write a Java program to determine if a string has all unique characters.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem22_testcases')">Test Cases</button>
+            <div id="problem22_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: "programming"
+                    <hr>
+                    - Expected Output: False
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem22_explanation')">Explanation</button>
+            <div id="problem22_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program determines if a string has all unique characters, i.e., no character repeats.
+                    - It should return `true` if all characters are unique and `false` if there are any repeated characters.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem22')">Solution</button>
+            <div id="problem22" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+public class UniqueCharactersChecker {
+    public boolean hasUniqueCharacters(String str) {
+        boolean[] charSet = new boolean[256];
+        
+        for (char c : str.toCharArray()) {
+            if (charSet[c]) {
+                return false;
+            }
+            charSet[c] = true;
+        }
+        
+        return true;
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 7: Write a Java program to find the shortest path in a maze using Breadth-First Search (BFS).</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem24_testcases')">Test Cases</button>
+            <div id="problem24_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Maze represented as a 2D array
+                    <hr>
+                    - Expected Output: Shortest path from start to end
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem24_explanation')">Explanation</button>
+            <div id="problem24_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program finds the shortest path in a maze using Breadth-First Search (BFS).
+                    - It starts from the entrance and explores adjacent cells, keeping track of the path.
+                    - When the exit is reached, it returns the shortest path.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem24')">Solution</button>
+            <div id="problem24" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MazeSolver {
+    public static int[][] findShortestPath(int[][] maze, int[] start, int[] end) {
+        // Implement BFS algorithm to find the shortest path
+        // ...
+        // Return the shortest path as a 2D array
+        return new int[1][1]; // Placeholder
+    }
+
+    public static void main(String[] args) {
+        int[][] maze = {
+            {1, 1, 0, 0, 0},
+            {0, 1, 1, 0, 1},
+            {0, 0, 1, 1, 1},
+            {1, 0, 0, 1, 0},
+            {1, 1, 1, 1, 1}
+        };
+
+        int[] start = {0, 0};
+        int[] end = {4, 4};
+
+        int[][] shortestPath = findShortestPath(maze, start, end);
+
+        // Print or display the shortest path
+        // ...
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 8: Write a Java program to implement a stack using two queues.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem26_testcases')">Test Cases</button>
+            <div id="problem26_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Stack operations (push, pop, top)
+                    <hr>
+                    - Expected Output: Results of the operations
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem26_explanation')">Explanation</button>
+            <div id="problem26_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should implement a stack using two queues.
+                    - It should support the following operations:
+                        - `push(x)`: Push an element x onto the stack.
+                        - `pop()`: Remove the element on the top of the stack and return it.
+                        - `top()`: Get the element on the top of the stack.
+                    - The program should perform these operations correctly using two queues.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem26')">Solution</button>
+            <div id="problem26" class="dropdown-content">
+                <p>
+                    Solution (Java):
+                    <pre><code class="language-java">
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MyStack {
+    private Queue<Integer> q1;
+    private Queue<Integer> q2;
+    private int top;
+
+    public MyStack() {
+        q1 = new LinkedList<>();
+        q2 = new LinkedList<>();
+    }
+
+    public void push(int x) {
+        q1.add(x);
+        top = x;
+    }
+
+    public int pop() {
+        while (q1.size() > 1) {
+            top = q1.remove();
+            q2.add(top);
+        }
+        int element = q1.remove();
+        Queue<Integer> temp = q1;
+        q1 = q2;
+        q2 = temp;
+        return element;
+    }
+
+    public int top() {
+        return top;
+    }
+
+    public boolean empty() {
+        return q1.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        MyStack stack = new MyStack();
+        
+        // Push elements onto the stack
+        stack.push(1);
+        stack.push(2);
+
+        // Pop the top element
+        System.out.println("Pop: " + stack.pop()); // Should return 2
+
+        // Get the top element
+        System.out.println("Top: " + stack.top()); // Should return 1
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="question">
+    <p>Problem 9: Write a Java program to implement a basic inventory management system for a store.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem33_testcases')">Test Cases</button>
+            <div id="problem33_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Add Product (Name, Price, Quantity), Search Product by Name, Update Product Quantity, Generate Sales Report
+                    <hr>
+                    - Expected Output: Product added, Product found, Quantity updated, Sales report generated
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem33_explanation')">Explanation</button>
+            <div id="problem33_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should allow users to add products with their name, price, and initial quantity to the inventory.
+                    - Users can search for products by name, update product quantities, and generate a sales report.
+                    - The expected output includes confirmation messages for these actions.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem33_solution')">Solution</button>
+            <div id="problem33_solution" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-java">
+import java.util.HashMap;
+import java.util.Map;
+
+class InventoryManager {
+    private Map&lt;String, Product&gt; inventory;
+
+    public InventoryManager() {
+        inventory = new HashMap&lt;&gt;();
+    }
+
+    public void addProduct(String name, double price, int quantity) {
+        // Implement product addition logic here
+        // ...
+    }
+
+    public Product searchProduct(String name) {
+        // Implement product search logic here
+        // ...
+    }
+
+    public boolean updateQuantity(String name, int newQuantity) {
+        // Implement quantity update logic here
+        // ...
+    }
+
+    public void generateSalesReport() {
+        // Implement sales report generation logic here
+        // ...
+    }
+}
+
+class Product {
+    private String name;
+    private double price;
+    private int quantity;
+
+    // Constructor, getters, and setters for Product class
+    // ...
+}
+
+public class Main {
+    public static void main(String[] args) {
+        InventoryManager manager = new InventoryManager();
+        
+        // Perform inventory management operations and test the system
+        // ...
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+<div class="question">
+    <p>Problem 10: Write a Java program to implement a simple library management system.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem34_testcases')">Test Cases</button>
+            <div id="problem34_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Add Book (Title, Author, ISBN), Search Book by Title, Borrow Book, Return Book, Generate Borrower's List
+                    <hr>
+                    - Expected Output: Book added, Book found, Book borrowed, Book returned, Borrower's list generated
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem34_explanation')">Explanation</button>
+            <div id="problem34_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should allow users to add books with their title, author, and ISBN to the library.
+                    - Users can search for books by title, borrow books, return books, and generate a list of borrowers.
+                    - The expected output includes confirmation messages for these actions.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem34_solution')">Solution</button>
+            <div id="problem34_solution" class="dropdown-content">
+                <p>
+                    Solution:
+                    <pre><code class="language-java">
+import java.util.HashMap;
+import java.util.Map;
+
+class LibraryManager {
+    private Map&lt;String, Book&gt; library;
+    private Map&lt;String, String&gt; borrowerList;
+
+    public LibraryManager() {
+        library = new HashMap&lt;&gt;();
+        borrowerList = new HashMap&lt;&gt;();
+    }
+
+    public void addBook(String title, String author, String isbn) {
+        // Implement book addition logic here
+        // ...
+    }
+
+    public Book searchBook(String title) {
+        // Implement book search logic here
+        // ...
+    }
+
+    public boolean borrowBook(String title, String borrower) {
+        // Implement book borrowing logic here
+        // ...
+    }
+
+    public boolean returnBook(String title, String borrower) {
+        // Implement book return logic here
+        // ...
+    }
+
+    public void generateBorrowerList() {
+        // Implement borrower's list generation logic here
+        // ...
+    }
+}
+
+class Book {
+    private String title;
+    private String author;
+    private String isbn;
+    private boolean isBorrowed;
+
+    // Constructor, getters, and setters for Book class
+    // ...
+}
+
+public class Main {
+    public static void main(String[] args) {
+        LibraryManager manager = new LibraryManager();
+        
+        // Perform library management operations and test the system
+        // ...
+    }
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+</div>
+<div style="display: flex;
+flex-direction: column;" id="section4">
+<h1>C++</h1>
+<div class="question">
+    <p>Problem 1: Write a C++ program to implement a simple calculator.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem36_testcases')">Test Cases</button>
+            <div id="problem36_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: Perform Addition, Subtraction, Multiplication, Division
+                    <hr>
+                    - Expected Output: Addition result: [result], Subtraction result: [result], Multiplication result: [result], Division result: [result]
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem36_explanation')">Explanation</button>
+            <div id="problem36_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should act as a simple calculator.
+                    - Users can perform addition, subtraction, multiplication, and division operations.
+                    - The expected output includes the results of each operation.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem36_solution')">Solution</button>
+            <div id="problem36_solution" class="dropdown-content">
+                <p>
+                    Solution (C++):
+                    <pre><code class="language-cpp">
+#include <iostream>
+
+int main() {
+    double num1, num2;
+    char operation;
+
+    // Input
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
+    std::cout << "Enter an operation (+, -, *, /): ";
+    std::cin >> operation;
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
+
+    // Calculate and output the result based on the operation
+    switch (operation) {
+        case '+':
+            std::cout << "Addition result: " << num1 + num2 << std::endl;
+            break;
+        case '-':
+            std::cout << "Subtraction result: " << num1 - num2 << std::endl;
+            break;
+        case '*':
+            std::cout << "Multiplication result: " << num1 * num2 << std::endl;
+            break;
+        case '/':
+            if (num2 != 0) {
+                std::cout << "Division result: " << num1 / num2 << std::endl;
+            } else {
+                std::cout << "Error: Division by zero is not allowed." << std::endl;
+            }
+            break;
+        default:
+            std::cout << "Error: Invalid operation." << std::endl;
+    }
+
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+<div class="question">
+    <p>Problem 2: Write a C++ program to find the sum of all prime numbers between two given integers.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem41_testcases')">Test Cases</button>
+            <div id="problem41_testcases" class="dropdown-content">
+                <p>
+                    Test Case:<hr>
+                    - Input: 10, 50
+                    <hr>
+                    - Expected Output: Sum of prime numbers between 10 and 50 is 163
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem41_explanation')">Explanation</button>
+            <div id="problem41_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should find and sum all prime numbers between two given integers (inclusive).
+                    - Prime numbers are positive integers greater than 1 that are divisible by only 1 and themselves.
+                    - The expected output includes the sum of prime numbers in the given range.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem41_solution')">Solution</button>
+            <div id="problem41_solution" class="dropdown-content">
+                <p>
+                    Solution (C++):
+                    <pre><code class="language-cpp">
+#include <iostream>
+
+bool isPrime(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i * i <= n; ++i) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int sumPrimesInRange(int start, int end) {
+    int sum = 0;
+    for (int i = start; i <= end; ++i) {
+        if (isPrime(i)) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+int main() {
+    int start = 10;
+    int end = 50;
+
+    int result = sumPrimesInRange(start, end);
+
+    std::cout << "Sum of prime numbers between " << start << " and " << end << " is " << result << std::endl;
+
+    return 0;
+}
+</code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+<div class="question">
+    <p>Problem 3: Write a C++ program to implement a stack that supports the following operations:</p>
+    <ul>
+        <li>Push: Add an element to the top of the stack.</li>
+        <li>Pop: Remove the element from the top of the stack.</li>
+        <li>Top: Get the element at the top of the stack without removing it.</li>
+        <li>IsEmpty: Check if the stack is empty.</li>
+    </ul>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem42_testcases')">Test Cases</button>
+            <div id="problem42_testcases" class="dropdown-content">
+                <p>
+                    Test Case 1:<hr>
+                    - Input: Push 5, Push 10, Top, IsEmpty
+                    <hr>
+                    - Expected Output: Top element: 10, Stack is not empty
+
+                    Test Case 2:<hr>
+                    - Input: Push 5, Pop, IsEmpty
+                    <hr>
+                    - Expected Output: Stack is empty
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem42_explanation')">Explanation</button>
+            <div id="problem42_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should implement a stack data structure with the mentioned operations.
+                    - Push: Add an element to the top of the stack.
+                    - Pop: Remove the element from the top of the stack.
+                    - Top: Get the element at the top of the stack without removing it.
+                    - IsEmpty: Check if the stack is empty.
+                    - The expected output should match the results of these operations.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem42_solution')">Solution</button>
+            <div id="problem42_solution" class="dropdown-content">
+                <p>
+                    Solution (C++):
+                    <pre><code class="language-cpp">
+#include <iostream>
+#include <stack>
+
+int main() {
+    std::stack&lt;int&gt; customStack;
+    
+    // Push operation
+    customStack.push(5);
+    customStack.push(10);
+    
+    // Top operation
+    int topElement = customStack.top();
+    std::cout << "Top element: " << topElement << std::endl;
+    
+    // IsEmpty operation
+    bool isEmpty = customStack.empty();
+    
+    if (isEmpty) {
+        std::cout << "Stack is empty" << std::endl;
+    } else {
+        std::cout << "Stack is not empty" << std::endl;
+    }
+    
+    // Pop operation
+    customStack.pop();
+    
+    // IsEmpty operation after a pop
+    isEmpty = customStack.empty();
+    
+    if (isEmpty) {
+        std::cout << "Stack is empty" << std::endl;
+    } else {
+        std::cout << "Stack is not empty" << std::endl;
+    }
+    
+    return 0;
+}
+</code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+<div class="question">
+    <p>Problem 4: Write a C++ program to implement a simple student grading system.</p>
+
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem44_testcases')">Test Cases</button>
+            <div id="problem44_testcases" class="dropdown-content">
+                <p>
+                    Test Case 1:<hr>
+                    - Input: Add Student (Name, ID), Add Grade (ID, Course, Grade), Calculate GPA (ID)
+                    <hr>
+                    - Expected Output: Student added, Grade added, GPA calculated
+
+                    Test Case 2:<hr>
+                    - Input: Add Student (Name, ID), Calculate GPA (ID)
+                    <hr>
+                    - Expected Output: Student added, GPA calculated
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem44_explanation')">Explanation</button>
+            <div id="problem44_explanation" class="dropdown-content">
+                <p>
+                    Explanation:
+                    - The program should allow users to add students with their names and IDs.
+                    - Users can also add grades for students, including the course name and grade.
+                    - The program should provide the functionality to calculate the GPA for a given student based on their grades.
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem44_solution')">Solution</button>
+            <div id="problem44_solution" class="dropdown-content">
+                <p>
+                    Solution (C++):
+                    <pre><code class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+
+class Student {
+public:
+    Student(const std::string &name, int id) : name(name), id(id), totalCredits(0), totalGradePoints(0) {}
+
+    void addGrade(const std::string &course, double grade, int credits) {
+        grades[course] = std::make_pair(grade, credits);
+        totalCredits += credits;
+        totalGradePoints += grade * credits;
+    }
+
+    double calculateGPA() const {
+        if (totalCredits == 0) {
+            return 0.0;
+        }
+        return totalGradePoints / totalCredits;
+    }
+
+    int getID() const {
+        return id;
+    }
+
+private:
+    std::string name;
+    int id;
+    std::map<std::string, std::pair<double, int>> grades;
+    int totalCredits;
+    double totalGradePoints;
+};
+
+class GradingSystem {
+public:
+    void addStudent(const std::string &name, int id) {
+        students[id] = Student(name, id);
+    }
+
+    bool addGrade(int id, const std::string &course, double grade, int credits) {
+        if (students.find(id) != students.end()) {
+            students[id].addGrade(course, grade, credits);
+            return true;
+        }
+        return false;
+    }
+
+    double calculateGPA(int id) const {
+        if (students.find(id) != students.end()) {
+            return students.at(id).calculateGPA();
+        }
+        return 0.0;
+    }
+
+private:
+    std::map<int, Student> students;
+};
+
+int main() {
+    GradingSystem gradingSystem;
+    
+    // Test cases
+    gradingSystem.addStudent("Alice", 1);
+    gradingSystem.addStudent("Bob", 2);
+    
+    gradingSystem.addGrade(1, "Math", 3.7, 4);
+    gradingSystem.addGrade(1, "Science", 4.0, 3);
+    
+    gradingSystem.addGrade(2, "History", 3.5, 3);
+    gradingSystem.addGrade(2, "English", 3.2, 4);
+    
+    double gpa1 = gradingSystem.calculateGPA(1);
+    double gpa2 = gradingSystem.calculateGPA(2);
+    
+    std::cout << "Alice's GPA: " << gpa1 << std::endl;
+    std::cout << "Bob's GPA: " << gpa2 << std::endl;
+    
+    return 0;
+}
+                    </code></pre>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Dropdown -->
+    <div class="dropdowns">
+      
+    </div>
+    
+    <!-- Solution Dropdown -->
+    <div class="dropdowns">
+       
+    </div>
+</div>
+<div class="question">
+    
+    <p>Problem 5: Two Sum Given an array of integers, find two numbers such that they add up to a specific target number. Return the indices of the two numbers as an array. You may assume that each input has exactly one solution, and you may not use the same element twice.</p>
+    
+    <!-- Test Cases Dropdown -->
+    <div class="dropdowns">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem50_testcases')">Test Cases</button>
+            <div id="problem50_testcases" class="dropdown-content">
+                <p>
+                    Test Case 1:<hr>
+                    - Input: [2, 7, 11, 15], Target: 9
+                    <hr>
+                    - Expected Output: [0, 1] (Indices of elements 2 and 7)
+                    
+                    Test Case 2:<hr>
+                    - Input: [3, 2, 4], Target: 6
+                    <hr>
+                    - Expected Output: [1, 2] (Indices of elements 2 and 4)
+                </p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem50_explanation')">Explanation</button>
+            <div id="problem50_explanation" class="dropdown-content">
+                <p>Explanation: You need to find two numbers in the array that add up to the target number. Return their indices as an array.</p>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('problem50_solution')">Solution</button>
+            <div id="problem50_solution" class="dropdown-content">
+                <p>Solution (C++):</p>
+                <pre><code class="language-javascript">
+                    #include <iostream>
+                        #include <vector>
+                        #include <unordered_map>
+                        
+                        std::vector<int> twoSum(std::vector<int>& nums, int target) {
+                            std::unordered_map<int, int> numIndices;
+                        
+                            for (int i = 0; i < nums.size(); i++) {
+                                int complement = target - nums[i];
+                                if (numIndices.find(complement) != numIndices.end()) {
+                                    return {numIndices[complement], i};
+                                }
+                                numIndices[nums[i]] = i;
+                            }
+                        
+                            return {}; // Return an empty vector if no solution is found
+                        }
+                        
+                        int main() {
+                            std::vector<int> nums1 = {2, 7, 11, 15};
+                            int target1 = 9;
+                            std::vector<int> result1 = twoSum(nums1, target1);
+                        
+                            std::vector<int> nums2 = {3, 2, 4};
+                            int target2 = 6;
+                            std::vector<int> result2 = twoSum(nums2, target2);
+                        
+                            // Display the results
+                            std::cout << "Result 1: [" << result1[0] << ", " << result1[1] << "]" << std::endl;
+                            std::cout << "Result 2: [" << result2[0] << ", " << result2[1] << "]" << std::endl;
+                        
+                            return 0;
+                        }
+                        
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Explanation Dropdown -->
+<div class="dropdowns">
+</div>
+
+<!-- Solution Dropdown -->
+<div class="dropdowns">
+</div>
+</div>
+  <script>
+    var openDropdown = null; // To keep track of the currently open dropdown
+
+    // JavaScript function to toggle the visibility of dropdown content
+    function toggleDropdown(id) {
+      var dropdown = document.getElementById(id);
+      
+      // Close the previously open dropdown, if any
+      if (openDropdown && openDropdown !== dropdown) {
+        openDropdown.style.display = "none";
+      }
+      
+      // Toggle the current dropdown
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "block";
+        openDropdown = dropdown;
+      }
+    }
+    var openDropdown = null; // To keep track of the currently open dropdown
+
+// JavaScript function to toggle the visibility of dropdown content
+function toggleDropdown(id) {
+  var dropdown = document.getElementById(id);
+  
+  // Close the previously open dropdown, if any
+  if (openDropdown && openDropdown !== dropdown) {
+    openDropdown.style.display = "none";
+  }
+  
+  // Toggle the current dropdown
+  if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+  } else {
+    dropdown.style.display = "block";
+    openDropdown = dropdown;
+  }
+}
+
+// Add an event listener to close the dropdowns on empty clicks
+document.addEventListener("click", function(event) {
+  if (openDropdown && !event.target.closest(".dropdown")) {
+    openDropdown.style.display = "none";
+    openDropdown = null;
+  }
+});
+  </script>
+</body>
+</html>
