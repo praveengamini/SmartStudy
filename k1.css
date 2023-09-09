@@ -140,4 +140,11 @@ body{
     transform: rotate(0deg);  
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   }
+ @media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  body {
+    background-color: skyblue;
+      z-index:10;
+  }
+ }
   
